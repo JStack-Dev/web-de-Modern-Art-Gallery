@@ -1,0 +1,1464 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  background-color: #fff;
+}
+
+
+
+/* =============================
+   Sección HERO - Mobile First
+============================= */
+.hero {
+  display: flex;
+  flex-direction: column; /* Imagen arriba, contenido abajo */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.hero__img {
+  width: 100%;
+  height: 240px;         /* Altura fija como en Figma */
+  object-fit: cover;     /* Recorta pero sin deformar */
+  display: block;
+}
+
+.hero__content {
+  padding: 1.5rem;
+  background-color: #fff;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Espacio entre título, texto y botón */
+}
+
+.hero__title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 90%;     /* 👈 separa las dos líneas sin exagerar */
+  letter-spacing: 2px;   /* opcional, separa letras */
+  text-transform: uppercase;
+  margin: 0 0 1.8rem 0;
+  }
+
+
+.hero__text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  color : #333; /* Color gris oscuro */
+  margin-bottom: 1.5rem;
+}
+
+.hero__button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  width: 100%;
+  max-width: 250px;
+  height: 72px;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  position: relative; /* Mantener flujo normal */
+  
+}
+
+
+
+.hero__button:hover {
+  background-color: #222;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.btn-text {
+  padding-left: 1.5rem;
+  flex: 1;
+}
+
+.btn-icon {
+  font-size: 150px;
+  background-color: #D5966C;
+  height: 100%;
+  width: 72px;
+  object-fit: contain;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+
+.gallery-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem; 
+}
+
+.gallery-info__img {
+  width: 92%;
+  margin: 0 auto 1rem auto; /* 👈 top 0, auto horizontal, bottom 2rem */
+  display: block;
+}
+
+.gallery-info__content {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+
+.gallery-info__title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  line-height: 45px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.gallery-info__text {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #444444;
+}
+
+
+.gallery-info__cta {
+  background-color: #000;
+  color: white;
+  padding: 2rem;
+  width: 92%;                 /* 👈 igual que las imágenes */
+  margin: 0rem auto 2rem auto; /* 👈 mismo margen para alinear */
+  text-align: left;
+}
+
+.gallery-info__cta-title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.gallery-info__cta-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem 1.2rem;
+  margin: 3rem auto 0rem auto;
+}
+
+.footer__content {
+  width: 92%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.footer__title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.footer__text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #ffffff;
+}
+
+.footer__icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer__icons a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* iconos blancos */
+  transition: transform 0.2s ease;
+}
+
+.footer__icons a:hover img {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* ================================
+   MAP
+}
+   
+/* ================================
+   RESET Y BASE
+================================ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ================================
+   BOTÓN DE VOLVER (Back Button)
+================================ */
+/* Botón estilo hero pero más pequeño */
+.back-button {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  height: 60px;
+  width: 265px;
+  text-decoration: none;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 20;
+  border-radius: 0px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+  transform: scale(1.02);
+}
+
+.back-button .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D5966C;
+  width: 56px;
+  height: 100%;
+}
+
+.back-button .btn-icon img {
+  width: 20px;
+  filter: invert(1);
+}
+.back-button .btn-icon svg {
+  width: 82px; /* Ancho del icono */
+  height: 42px ;
+  stroke: #fff;        /* Color blanco */
+  stroke-width: 0.5;     /* Grosor del trazo */
+  fill: none;          /* Sin relleno */
+}
+
+.back-button .arrow-icon {
+  transform: scale(5); /* Aumenta el tamaño por factor */
+}
+
+
+
+
+.back-button .btn-text {
+  background-color: #000;
+  color: #fff;
+  flex: 1;                    /* Ocupa todo el ancho restante */
+  display: flex;
+  align-items: center;        /* Centrado vertical */
+  justify-content: flex-start; /* Texto pegado a la izquierda */
+  padding-left:45px;      /* Centrado horizontal */
+  height: 100%;               /* Ocupa toda la altura */
+  font-size: 18px;
+}
+
+
+
+
+
+/* ================================
+   MAPA Y ELEMENTOS SOBRE EL MAPA
+================================ */
+.location__map {
+  position: relative;        /* Para posicionar botón y chincheta */
+  width: 375px;              /* Tamaño fijo según Figma */
+  height: 550px;
+  margin: 0 auto;            /* Centrado horizontal */
+}
+
+.location__map picture img {
+  width: 375px;       /* Tamaño específico para mobile */
+  height: 550px;
+  object-fit: cover;  /* Recorta si es necesario */
+  display: block;
+}
+
+
+.location__marker {
+  position: absolute;        /* Chincheta centrada */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: auto;
+}
+
+
+
+/* ================================
+   SECCIÓN DE INFORMACIÓN (Bloque negro)
+================================ */
+.location__info {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+}
+
+.location__title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.location__subtitle {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 32px;
+  color: #D5966C;            /* Dorado */
+  margin-bottom: 1rem;
+  padding-top: 8px;
+}
+
+.location__address,
+.location__text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+/* ================================
+   FOOTER DE LOCALIZACIÓN (DORADO)
+================================ */
+.location__footer {
+  background-color: #D5966C;
+  color: #000;
+  padding: 2rem;
+  
+}
+
+.location__footer .footer__title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.location__footer .footer__text_map  {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #000; /* Texto en negro */
+  text-align: left;
+  width: 100%; 
+   padding: 0;
+}
+
+.footer__icons_map {
+  display: flex;
+  gap: 1rem;                 /* Separación entre iconos */
+
+  filter: brightness(0) saturate(100%);
+
+
+}
+
+
+/* =============================
+   Tablet - min-width: 768px
+============================= */
+@media (min-width: 768px) {
+
+  /* --- HERO --- */
+  .hero {
+  display: flex;
+  align-items: flex-start;   /* Alinea la imagen y el contenido arriba */
+  justify-content: flex-start; /* Alinea a la izquierda */
+  margin: 0;
+  padding: 0;                /* Sin espacio interno */
+}
+
+  .hero__img {
+  width: 437px;              /* Tamaño Figma */
+  height: 700px;
+  object-fit: cover;         /* Recorta pero mantiene proporción */
+  display: block;            /* Elimina posibles espacios fantasmas */
+  margin: 0;                 /* Sin márgenes extra */
+}
+
+  .hero__content {
+    width: 409px;               /* Tamaño Figma */
+    height: 410px;
+    margin-top: -550px;   /* Mueve hacia abajo */
+    margin-left: 400px;  /* Mueve hacia la derecha *//* Separación respecto a la imagen */
+    padding: 0;                 /* Ajustamos padding */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: none; 
+    align-items: flex-start;
+  }
+
+.hero__title {
+  font-size: 70px;
+  line-height: 1;
+  margin-top: -15px;    /* Mueve hacia abajo */
+  margin-left: -60px;   /* Mueve hacia la derecha */
+   transform: translateX(50px); /* Mueve a la derecha sin afectar el flujo */
+  
+}
+
+  .hero__text {
+    width: 90%;   /* Cambia el ancho del bloque */
+    max-width: 350px;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top:-30px;    /* Mueve hacia abajo */
+    margin-left: -60px;   /* Mueve hacia la derecha */
+  transform: translateX(50px); /* Mueve a la derecha sin afectar el flujo */
+}
+
+  
+
+  .hero__button {
+    max-width: 250px;
+    height: 72px;
+    font-size: 15px;
+    margin-top: -30px;    /* Mueve hacia abajo */
+    margin-left: -15px;   /* Mueve hacia la derecha */
+  }
+
+  /* --- GALLERY INFO --- */
+  .gallery-info {
+    width: 689px;               /* Tamaño Figma */
+    height: 1131px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    margin: 5rem auto;
+    width: 92%;
+    margin-top: 300px;   /* Mueve hacia abajo */
+    margin-left: -100px; 
+    
+  }
+
+  .gallery-info__img {
+    width: 100%;
+    margin: 0;
+    margin-top: -20px;   /* Mueve hacia abajo */
+    margin-left: 420px; 
+    z-index: 10; 
+
+  }
+
+  .gallery-info__content {
+    padding: 1rem;
+    margin-top:-0px;   /* Mueve hacia abajo */
+    margin-left: -400px; 
+  }
+
+  .gallery-info__title {
+    font-size: 55px;
+    line-height: 1.1;
+    width: 50%;   /* Cambia el ancho del bloque */
+    max-width: 200px;
+    margin-top: 0px;   /* Mueve hacia abajo */
+    margin-left: 50px; 
+    
+
+  }
+
+  .gallery-info__text {
+    font-size: 18px;
+    line-height: 1.6;
+    width: 40%;   /* Cambia el ancho del bloque */
+    max-width: 230px;
+    margin-left: 50px; 
+  }
+
+
+/* Segunda imagen */
+.gallery-info__img:nth-of-type(2) {
+  position: relative;  /* Se mueve respecto a su posición normal */
+  top: 10px;           /* Mueve hacia abajo */
+  left: -300px;          /* Mueve hacia la derecha */
+  height: 720px;        /* Alto específico */
+  
+}
+
+/* Tercera imagen */
+.gallery-info__img:nth-of-type(3) {
+  position: relative;
+  top: 10px;          /* Mueve hacia arriba */
+  left: -310px;         /* Mueve hacia la izquierda */
+    width: 280px;         /* Ancho específico */
+  height: 313px;        /* Alto específico */
+  object-fit: cover;
+}
+
+
+
+
+/* Bloque CTA */
+.gallery-info__cta {
+  background-color: #000;  /* Fondo negro como en tu diseño */
+  color: #fff;
+  padding: 2rem;
+  text-align: left;
+  position: relative;
+    top: -420px;          /* Mueve hacia arriba */
+  left: 490px;         /* Mueve hacia la izquierda */
+      width: 280px;         /* Ancho específico */
+  height: 396px;        /* Alto específico */
+}
+
+.gallery-info__cta-title {
+  position: relative;  
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 49px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  top: 60px;          /* Mueve hacia arriba */
+  left: 0px;         /* Mueve hacia la izquierda */
+  width: 200px;         /* Ancho específico */
+  height: 150px;        /* Alto específico */
+ 
+}
+
+.gallery-info__cta-text {
+  position: relative; 
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ccc;             /* Texto gris claro sobre fondo negro */
+  top: 40px;          /* Mueve hacia arriba */
+  left: 0px;         /* Mueve hacia la izquierda */
+  width: 200px;         /* Ancho específico */
+  height: 200px;        /* Alto específico */
+}
+
+
+
+
+
+
+
+  /* --- FOOTER --- */
+  .footer__content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    width: 760px;         /* Ancho específico */
+    height: 216px;        /* Alto específico */
+    
+  }
+
+  .footer__title {
+    font-size: 30px;
+    padding: 40px 40px;  /* 20px arriba y abajo, 0 a los lados */
+     width: 760px;         /* Ancho específico */
+    height: 216px;        /* Alto específico */
+  }
+
+ .footer__text {
+  font-size: 16px;
+  width: 1100px;         /* Ancho específico */
+  height: 216px;        /* Alto específico */
+  padding: 50px 20px;   /* Espacio interno */
+  position: relative;   /* Necesario para usar left */
+  left: -70px;         /* Desplaza 300px a la izquierda */
+}
+
+}
+
+.footer__content {
+  position: relative; /* Contexto para los hijos */
+}
+
+.footer__icons {
+  display: flex;             /* Pone los iconos en fila */
+  gap: 1.5rem;               /* Espacio entre iconos */
+  justify-content: flex-end; /* Alinea los iconos a la derecha */
+  align-items: center;       /* Centra verticalmente */
+  position: relative;        /* Necesario para usar left */
+  left: -50px;              /* Ahora sí se mueve 100px a la izquierda */
+  top: -40px;
+}
+
+
+.footer__icons a img {
+  width: 24px;               /* Tamaño del icono */
+  height: 24px;
+  filter: brightness(0) invert(1); /* Hace los iconos blancos */
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.footer__icons a img:hover {
+  transform: scale(1.1);     /* Efecto zoom al pasar el mouse */
+  filter: brightness(0.8) invert(1); /* Ligero oscurecimiento */
+  cursor: pointer;           /* Cambia el cursor a mano */
+}
+
+
+
+/* ==============================
+   Tablet – Location Page (≥768px)
+================================= */
+@media (min-width: 768px) {
+
+  /* ====== MAPA Y BOTÓN BACK ====== */
+.location__map {
+  width: 100%;
+  height: 600px;              /* Altura para tablet */
+  position: relative;         /* Necesario para posicionar elementos internos */
+  
+}
+
+.location__map picture img {
+    content: url('assets/img/Bitmap-tablet.png'); /* Cambia imagen */
+    width: 100%;        /* Se ajusta al ancho del contenedor */
+    height: 600px;      /* Ajuste de altura tablet */
+    object-fit: contain;/* Mantiene proporciones sin recorte */
+  }
+
+/* Chincheta */
+.location__marker {
+  position: absolute;
+  top: 50%;                   /* Centrada verticalmente */
+  left: 50%;                  /* Centrada horizontalmente */
+  transform: translate(-50%, -50%);
+  width: 60px;                /* Tamaño específico */
+  height: auto;
+  z-index: 10;
+}
+
+/* Botón Back */
+.back-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  width: 265px;         /* Ajuste proporcional al diseño */
+  height: 60px;         /* Altura exacta según la referencia */
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 18px;      /* Tamaño del texto proporcional */
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 3px;  /* Espaciado como en la imagen */
+  position: absolute;
+  top: 0;
+  left: 40px ; 
+  border: none;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.back-button .btn-icon {
+  width: 56px;          /* Ancho dorado exacto */
+  height: 100%;
+  background-color: #D5966C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-button .btn-icon svg {
+  width: 20px;          /* Tamaño de la flecha */
+  height: 20px;
+  stroke: #fff;         /* Flecha blanca */
+  stroke-width: 2;
+  fill: none;
+}
+
+.back-button .btn-text {
+  flex: 1;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Texto centrado horizontalmente */
+  padding: 0 15px;
+}
+
+
+
+  /* ====== BLOQUE NEGRO DE INFORMACIÓN ====== */
+.location__info {
+  background-color: #000;
+  color: #fff;
+  padding: 4rem 6rem;
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Primera columna fija, segunda flexible */
+  column-gap: 3rem;                /* Espacio entre columnas */
+  align-items: start;
+  width: 900px; 
+  left: -80px;
+  
+}
+
+.location__title,
+.location__subtitle,
+.location__address,
+.location__text {
+  position: relative;
+  left: -50px; /* Ajusta el valor hasta que encaje con tu diseño */
+}
+/* La primera columna será el h2 (OUR LOCATION) */
+.location__title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  grid-column: 1; /* Ubicado en columna 1 */
+  grid-row: 1 / 5; /* Ocupa todas las filas */
+  
+}
+
+/* Columna derecha (el resto de elementos) */
+.location__subtitle,
+.location__address,
+.location__text {
+  grid-column: 2; /* Ubicar en la segunda columna */
+}
+
+.location__subtitle {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 28px;
+  color: #D5966C;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.location__address,
+.location__text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+  /* ====== FOOTER NARANJA ====== */
+  .location__footer {
+  background-color: #D5966C;
+  color: #000;
+  display: grid;  
+  grid-template-columns: 200px 1fr 150px; /* 3 columnas: título | texto | iconos */
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 2rem;
+}
+
+/* Título: columna 1 */
+.footer__title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative; /* Para moverlo libremente */
+  left: 0;            /* Ajustas aquí */
+  top: 0;
+  display: grid;
+  grid-template-columns: 200px 1fr 150px; /* 200px para el título */
+  gap: 2rem;
+}
+
+/* Texto: columna 2 */
+.footer__text_map {
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 100%;
+  position: relative;  /* Puedes moverlo también */
+  transform: translate(-40px, -20px); /* Mueve 20px a la izquierda y 10px hacia arriba */
+    grid-template-columns: 280px 1fr 150px; /* 200px para el título */
+  gap: 2rem;
+}
+
+/* Iconos: columna 3 */
+.footer__icons_map {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  position: relative;  /* También puedes moverlos */
+  left: -230px;
+  top: -50px; /* Ajusta según necesites */
+}
+
+.footer__icons_map a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0);
+  transition: transform 0.2s ease;
+}
+
+.footer__icons_map a img:hover {
+  transform: scale(1.1);
+}
+
+
+  .footer__title {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+    margin-left: -40px;
+    margin-top: -10px;    
+  }
+
+
+
+}
+
+
+
+ 
+
+
+
+
+/* ================================
+   DESKTOP (≥1200px)
+================================ */
+
+@media (min-width: 1200px) {
+  .hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 450px 1fr; /* Primera columna: negro (450px), segunda: imagen */
+    width: 100%;
+    height: 799px;                  /* Altura exacta */
+  }
+
+  /* Fondo negro (lado izquierdo) */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 450px;                  /* Ancho exacto */
+    height: 799px;                 /* Alto exacto */
+    background-color: #000;        /* Negro */
+    opacity: 1;                    /* Opacidad total */
+    z-index: 1;                    /* Encima de la imagen */
+  }
+
+  /* Imagen a la derecha */
+  .hero__img {
+    grid-column: 2;                /* Imagen en la segunda columna */
+    width: 540px;
+    height: 800px;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  /* Contenido encima */
+  .hero__content {
+    position: absolute;
+    top: 50%;
+    left: 50px;                    /* Mueve horizontalmente sobre el negro */
+    transform: translateY(-50%);
+    z-index: 2;
+    color: #fff;
+    max-width: 350px;
+  }
+
+.hero__title {
+  font-size: 96px;
+  line-height: 1;
+  margin-bottom: 2rem;
+  
+  position: absolute;        /* Para sacarlo del flujo normal */
+    width: 514px;         /* Ancho exacto que desees */
+  height: 176px;        /* Alto exacto que desees */
+  top: 500px;                  /* Mitad vertical */
+  left: -285px;                 /* Mitad horizontal */
+  
+  z-index: 999;              /* Por encima de todos los elementos */
+  color: #fff;               /* Asegúrate de que el texto sea visible */
+}
+
+
+  .hero__text {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;        /* Peso regular (400) */
+  font-style: normal;      /* Light no existe como valor, usa normal */
+  font-size: 22px;         /* Tamaño de fuente */
+  line-height: 35px;       /* Espacio entre líneas */
+  letter-spacing: 0px;     /* Espaciado entre letras */
+
+
+ 
+  margin-bottom: 2rem;
+  
+  position: absolute;        /* Para sacarlo del flujo normal */
+    width: 350px;         /* Ancho exacto que desees */
+  height: 160px;        /* Alto exacto que desees */
+  top: 520px;                  /* Mitad vertical */
+  left: 485px;                 /* Mitad horizontal */
+  
+  z-index: 999;              /* Por encima de todos los elementos */
+  color:  #444444;
+  
+}
+  .hero__button {
+  position: absolute;        /* Para sacarlo del flujo normal */
+  width: 280px;         /* Ancho exacto que desees */
+  height: 72px;        /* Alto exacto que desees */
+  top: 800px;                  /* Mitad vertical */
+  left: 485px;                 /* Mitad horizontal */
+  max-width: none;       /* Desactiva límites */
+  z-index: 999; 
+  font-size: 20px;
+  justify-content: space-between; /* Para separar texto e ícono */
+  }
+
+.btn-text {
+  position: relative;
+  left: 20px;   /* Mueve hacia la derecha */
+  top: 0px;     /* Mueve hacia abajo */
+}
+
+  .btn-icon {
+    width: 70px;
+  }
+
+
+
+
+/* ====== GALLERY INFO ====== */
+.gallery-info {
+  position: relative;          /* Contenedor relativo para que los hijos con absolute se ubiquen aquí */
+  max-width: 1110px;
+  height: 1150px;              /* Altura suficiente para acomodar los elementos (ajusta según tu diseño) */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* ====== TEXT CONTENT ====== */
+.gallery-info__content {
+  position: absolute;
+  top: 80px;                   /* Ajusta la posición vertical */
+  left: 220px;                  /* Ajusta la posición horizontal */
+  width: 7500px;                /* Ajusta el ancho del bloque de texto */
+  color: #000;
+}
+
+.gallery-info__title {
+   position: absolute;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  top: 150px;             
+  left: 150px;  
+    max-width: none;  /* No limitamos ancho */
+    white-space: pre-wrap; /* Permitimos saltos */ 
+        content: "Your Day At \A The Gallery";
+    display: block;
+}
+
+ 
+
+.gallery-info__text {
+  position: absolute;   /* Te permite moverlo donde quieras */
+  top: 230px;           /* Ajusta libremente */
+  left: 100px;          /* Ajusta libremente */
+
+  width: auto;          /* El ancho se adapta al contenido */
+  max-width: 350px;     /* Límite opcional (puedes quitarlo) */
+  height: auto;         /* La altura se adapta al texto */
+
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;      /* Puedes cambiarlo sin romper nada */
+  line-height: 1.8;
+  color: #444;
+
+  padding: 0;           /* Espacio interno libre */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+/* ====== IMAGES ====== */
+.gallery-info__img {
+  position: absolute;
+  object-fit: cover;      /* Mantiene la proporción */
+  width: auto;            /* Ancho libre */
+  height: auto;           /* Alto libre */
+  max-width: none;        /* Sin límite máximo */
+  max-height: none;       /* Sin límite máximo */
+}
+
+/* Imagen 1 */
+.gallery-info__img:nth-of-type(1) {
+  top: 100px;        /* Puedes moverla cambiando estos valores */
+  right: 500;
+  width: 635px;  /* Ajusta ancho libremente */
+  height: 400px;  /* Ajuste proporcional */
+}
+
+/* Imagen 2 */
+.gallery-info__img:nth-of-type(2) {
+  top: 500px;
+  left: -520px;
+  width: 635px;  /* Ajusta ancho libremente */
+  height: 700px;
+}
+
+/* Imagen 3 */
+.gallery-info__img:nth-of-type(3) {
+  top: 500px;
+  left: -950px;
+  width: 480px;  /* Ajusta ancho libremente */
+  height: 313px;
+}
+
+
+/* ====== CTA ====== */
+.gallery-info__cta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 40px 30px;
+  top: 835px;
+  left: 525px;
+  width: 480px;  /* Ajusta ancho libremente */
+  height: 365px;
+}
+
+.gallery-info__cta-title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 60px;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  top: 10px;
+  left: 10px;
+  width: 350px;           /* Ancho de la caja */
+  white-space: normal;    /* Permite saltos de línea */
+  word-wrap: break-word;  /* Rompe palabras largas si es necesario */
+}
+
+
+.gallery-info__cta-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #ccc;
+  top: 10px;
+  left: 10px;
+  width: 380px;           /* Define el ancho de la caja */
+  white-space: normal;    /* Permite saltos de línea */
+  word-wrap: break-word;  /* Rompe palabras largas si es necesario */
+}
+
+
+
+@media (min-width: 1200px) {
+  .gallery-info__title {
+    position: absolute;
+    font-size: 60px;
+    top: 80px;
+    left: 50px;
+    visibility: hidden; /* Ocultamos el texto original */
+  }
+
+  .gallery-info__title::before {
+    content: "Your Day At \A The Gallery"; /* Salto de línea después de "At" */
+    white-space: pre; 
+    visibility: visible;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+
+
+
+.footer {
+  position: absolute;    /* Permite moverlo libremente */
+  background-color: #000; 
+  color: #fff;
+  padding: 40px 20px;
+
+  top: 1000px;            /* Ajusta distancia desde arriba */
+  left: 225px;           /* Ajusta distancia desde la izquierda */
+  
+  width: 1500px;          /* Ancho de la caja */
+  height: 350px;         /* Alto de la caja */
+  box-sizing: border-box;
+}
+
+.footer__content {
+  display: flex;                  /* Distribución en línea */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center;            /* Alineación vertical */
+  max-width: 1200px;              /* Ancho máximo del footer */
+  margin: 0 auto;                 /* Centrar contenido */
+  flex-wrap: wrap;                /* Permitir salto en pantallas pequeñas */
+  gap: 20px;
+}
+
+.footer__title {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 32px;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-align: left;
+  top: 50px;            /* Ajusta distancia desde arriba */
+  left: -220px;           /* Ajusta distancia desde la izquierda */
+  
+}
+
+.footer__text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  text-align: left;
+  max-width: 480px;
+  height: 84px;   
+  top: -200px;            /* Ajusta distancia desde arriba */
+  left: 140px; 
+}
+
+.footer__icons {
+  display: flex;
+  gap: 15px;                      /* Espacio entre iconos */
+  justify-content: flex-end;      /* Alineados a la derecha */
+  top: -180px;            /* Ajusta distancia desde arriba */
+  left: 150px; 
+}
+
+.footer__icons img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footer__icons img:hover {
+  transform: scale(1.2);          /* Efecto hover */
+}
+
+
+
+
+
+
+/* ====== MAPA Y BOTÓN ====== */
+@media (min-width: 1200px) {
+  .location__map {
+    position: relative;
+    width: 100vw;  /* Ahora ocupa todo el ancho */
+    height: 100vh; /* Toda la altura de la pantalla */
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .location__map img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+
+.back-button {
+  position: absolute;
+  top: 0;
+  left: 200px;
+  display: flex;
+  align-items: center;
+  width: 280px;
+  height: 60px;
+  text-decoration: none;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1000;
+
+  /* Gradiente para unir colores sin hueco */
+  background: linear-gradient(to right, #D5966C 0 56px, #000 56px 100%);
+  color: #fff;
+  padding: 0;
+  gap: 0;
+}
+
+.back-button:hover {
+  transform: scale(1.02);
+}
+
+/* Flecha */
+.back-button .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 100%;
+}
+
+.back-button .arrow-icon {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+  fill: none;
+  stroke-width: 2px;
+}
+
+/* Texto */
+.back-button .btn-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0px; /* Mueve el texto a la derecha */
+}
+
+
+
+/* Marcador */
+.location__marker {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+
+
+  width: 40px !important;
+  height: 40px !important;
+  object-fit: contain;
+  display: block;
+  z-index: 10;        /* Para estar por encima del mapa */
+}
+
+
+/* ====== BLOQUE NEGRO INFO ====== */
+.location__info {
+  display: flex;                    /* Convierte el contenedor en un flexbox, alineando los hijos en fila. */
+  justify-content: space-between;   /* Distribuye los hijos con espacio igual entre ellos (primer y último pegados a los bordes). */
+  align-items: flex-start;          /* Alinea los elementos hijos al inicio verticalmente (parte superior del contenedor). */
+  background-color: #000;           /* Establece el color de fondo del bloque en negro. */
+  color: #fff;                      /* Establece el color del texto en blanco para todos los hijos. */
+  position: relative;              /* Activamos el posicionamiento relativo */
+  top: -140px;                      
+  left: 0px;
+  width: 100vw;                     /* Ocupa todo el ancho de la ventana del navegador (viewport width). */
+  height: 500px;
+  max-width: none;                  /* Elimina cualquier límite máximo de ancho. */
+  padding: 60px 100px;              /* Aplica 60px de espacio interno arriba/abajo y 100px a los lados. */
+  margin: 0;                        /* Elimina cualquier margen externo. */
+  box-sizing: border-box;           /* Incluye padding y borde dentro de `width` y `height` para que no aumenten el tamaño real. */
+    display: grid;                 /* Usamos grid para el layout */
+  grid-template-columns: 1fr 2fr;/* Columna 1 (título) y columna 2 (texto) */
+  align-items: start;            /* Alinea al inicio */
+  gap: 50px;                     /* Espacio entre las columnas */
+}
+
+
+
+.location__title {
+  position: absolute;            /* Permite moverlo libremente */
+  top: 50px;                     /* Distancia desde arriba (ajústalo) */
+  left: 80px;                    /* Distancia desde la izquierda (ajústalo) */
+
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 90px;               /* Tamaño de la fuente */
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: left;
+  color: #fff;
+  margin: 0;
+
+  width: 350px;                  /* Ancho de la caja */
+  height: auto;                  /* Altura adaptada al texto */
+  line-height: 1.1;
+}
+
+
+
+.location__subtitle {
+  position: absolute;            /* Permite moverlo libremente */
+  top: 120px;                    /* Ajusta distancia desde arriba */
+  left: 80px;                    /* Ajusta distancia desde la izquierda */
+
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: #D5966C;                /* Color dorado */
+  margin: 0;
+
+  width: 300px;                  /* Control del ancho de la caja */
+  height: auto;                  /* Altura adaptable */
+}
+
+.location__address {
+  position: absolute;            /* Mueve la dirección libremente */
+  top: 160px;                    /* Ajusta posición vertical */
+  left: 80px;                    /* Ajusta posición horizontal */
+
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ccc;
+
+  width: 250px;                  /* Ancho de la caja */
+  height: auto;                  /* Se ajusta al contenido */
+}
+
+.location__text {
+  position: absolute;            /* Mueve el texto libremente */
+  top: 240px;                    /* Ajusta posición vertical */
+  left: 80px;                    /* Ajusta posición horizontal */
+
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ccc;
+
+  width: 400px;                  /* Control del ancho */
+  height: auto;                  /* Ajusta la altura */
+}
+
+/* ====== FOOTER NARANJA ====== */
+.location__footer {
+  position: relative;              /* Permite posicionar los hijos de forma absoluta */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #D5966C;
+  color: #000;
+ top: -140px;
+  width: 100vw;                    /* Ocupa todo el ancho de la pantalla */
+  height: 200px;                   /* Altura del footer (ajústala a tu gusto) */
+  padding: 40px 100px;
+  box-sizing: border-box;          /* El padding cuenta dentro del width y height */
+}
+
+/* ====== Título ====== */
+.footer__title {
+  position: absolute;              /* Puedes moverlo con top/left */
+  top: 40px;                       /* Distancia desde la parte superior */
+  left: 130px;                      /* Distancia desde el lado izquierdo */
+
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 24px;                 /* Tamaño de texto (puedes cambiarlo) */
+  font-weight: 900;
+  text-transform: uppercase;
+
+  width: 200px;                    /* Control del ancho de la caja */
+  height: auto;                    /* Altura adaptable */
+}
+
+/* ====== Texto ====== */
+.footer__text_map {
+  position: absolute;    
+  top: 80px;             
+  left: 600px;           
+
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;       
+  line-height: 1.5;
+  color: #000;
+
+  white-space: normal;
+  word-wrap: break-word; /* Permite que el texto se ajuste al ancho */
+
+  width: 400px !important;          /* Ajusta a un ancho más pequeño */
+  height: auto;          
+  padding: 0;            
+  box-sizing: border-box;
+}
+
+
+
+/* ====== Iconos ====== */
+.footer__icons_map {
+  position: absolute;              /* Mueve los iconos libremente */
+  top: 60px;
+  right: 180px;                     /* Alineado a la derecha */
+  display: flex;
+  gap: 20px;                       /* Espacio entre iconos */
+}
+
+.footer__icons_map img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.footer__icons_map img:hover {
+  transform: scale(1.2);
+}
+
+
+
+
+
+
+
+
+}
+
+
+
